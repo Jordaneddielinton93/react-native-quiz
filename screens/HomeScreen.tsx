@@ -7,9 +7,6 @@ import * as UI from "../components";
 import * as JSX_Data from "../constants";
 
 export default function HomeScreen({}) {
-  // JSX_Data.HTMLs_JSX_Character_Data
-  // .titleAndText
-  // .JSX_Character_Data
   return (
     <View style={styles.container}>
       <UI.CodeEditor jsxData={JSX_Data.HTMLs_JSX_Character_Data} />

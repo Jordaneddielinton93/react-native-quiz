@@ -46,10 +46,7 @@ const characterSlice = createSlice({
   reducers: {
     setComponent(state: any[], action: PayloadAction<TActionPayload>) {
       const payload = action.payload;
-      // 2. check if the the current line text being written has a component written
       state[payload.lineNumberIndex] = { ...payload };
-
-      console.log(payload);
     },
   },
 });
