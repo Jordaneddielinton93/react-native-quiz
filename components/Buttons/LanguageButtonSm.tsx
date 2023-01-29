@@ -1,32 +1,39 @@
-import { BlurView } from "expo-blur";
-import React, { useEffect, useState } from "react";
-import { Animated, Button, StyleSheet, View } from "react-native";
+import { Button, Image, Pressable, StyleSheet, View } from "react-native";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
-import { Svg, Circle } from "react-native-svg";
-type Props = {};
 
-export default function LanguageButton({}: Props) {
+type Props = {
+  img: any;
+  progress: number;
+};
+
+export default function LanguageButtonSm({ img, progress }: Props) {
   return (
     <View style={styles.container}>
       <AnimatedCircularProgress
         style={styles.svg}
-        size={140}
+        size={70}
         width={10}
-        fill={10}
+        fill={progress}
         tintColor="#44B446"
         onAnimationComplete={() => console.log("onAnimationComplete")}
-        backgroundColor="white"
       />
       <View style={styles.innerCircle}>
-        <View style={styles.lastCircle}></View>
+        <View
+          style={{
+            ...styles.lastCircle,
+            borderColor: progress ? "#44B446" : "#808080",
+          }}
+        >
+          <Image source={img} style={{ height: 37, width: 33 }} />
+        </View>
       </View>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
-    width: 140,
-    height: 140,
+    width: 70,
+    height: 70,
     alignItems: "center",
     justifyContent: "center",
     position: "relative",
@@ -39,8 +46,8 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: 120,
-    height: 120,
+    width: 60,
+    height: 60,
     backgroundColor: "white",
     borderRadius: 100,
     shadowColor: "#171717",
@@ -49,8 +56,8 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   lastCircle: {
-    width: 107,
-    height: 107,
+    width: 54,
+    height: 54,
     backgroundColor: "white",
     borderRadius: 100,
     shadowColor: "#171717",
@@ -59,5 +66,16 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     borderWidth: 2,
     borderColor: "#44B446",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  button: {
+    position: "absolute",
+    left: 0,
+    top: 0,
+    height: "100%",
+    width: "100%",
+    zIndex: 2,
   },
 });

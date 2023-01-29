@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
   Container: {
     display: "flex",
     width: "100%",
-    // top: 45,
     marginLeft: "auto",
     marginRight: "auto",
     left: 0,
@@ -36,5 +35,4 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     alignItems: "center",
   },
-  text: {},
 });

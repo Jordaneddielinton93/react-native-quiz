@@ -1,6 +1,8 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
 import { Cloud_and_rocket } from "../../constants";
+import * as UI from "../";
+import ImageAssets from "../../assets/images";
 
 type Props = {};
 
@@ -9,10 +11,11 @@ export default function Mountain_Avatar({}: Props) {
     <View style={styles.Container}>
       <Cloud_and_rocket />
       <ImageBackground
-        source={require("../../assets/images/curriculmScreen/mountain.png")}
+        source={ImageAssets.curriculum.mountain}
         style={styles.image}
         resizeMode="cover"
       ></ImageBackground>
+      <UI.ShipRotation />
     </View>
   );
 }

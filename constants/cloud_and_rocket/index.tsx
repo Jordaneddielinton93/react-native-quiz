@@ -1,6 +1,6 @@
 import { BlurView } from "expo-blur";
-import React from "react";
-import { StyleSheet, View } from "react-native";
+import React, { useEffect, useState } from "react";
+import { Image, StyleSheet, View, Animated } from "react-native";
 
 import { clouds } from "./clouds";
 type Props = {};

@@ -1,16 +1,23 @@
-import { BlurView } from "expo-blur";
 import React from "react";
-import { Image, ImageBackground, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import * as UI from "../../components";
 import { Squares_svg } from "../../constants";
 
-type Props = {};
-
-export default function LanguageSection({}: Props) {
+export default function LanguageSection({
+  img,
+  progress,
+  navigation,
+  languageIcon,
+}: any) {
   return (
     <View style={styles.container}>
-      <UI.LanguageButton />
+      <UI.LanguageButtonLg
+        navigation={navigation}
+        img={img}
+        progress={progress}
+        languageIcon={languageIcon}
+      />
       <Squares_svg style={styles.square1} />
       <Squares_svg style={styles.square2} color="#4C5DEE" />
     </View>
