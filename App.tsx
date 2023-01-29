@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+// import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 import useCachedResources from "./hooks/useCachedResources";
 import useColorScheme from "./hooks/useColorScheme";
@@ -20,17 +20,18 @@ export default function App() {
     return (
       <Provider store={store}>
         <NavigationContainer>
-          <SafeAreaProvider>
-            {/* <HomeScreen /> */}
+          {/* <SafeAreaProvider> */}
 
-            <Stack.Navigator initialRouteName="CurriculmScreen">
-              <Stack.Screen
-                name="CurriculmScreen"
-                component={CurriculmScreen}
-              />
-              <Stack.Screen name="Details" component={HomeScreen} />
-            </Stack.Navigator>
-          </SafeAreaProvider>
+          <Stack.Navigator initialRouteName="CurriculmScreen">
+            <Stack.Screen
+              name="CurriculmScreen"
+              component={CurriculmScreen}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen name="Details" component={HomeScreen} />
+          </Stack.Navigator>
+
+          {/* </SafeAreaProvider> */}
         </NavigationContainer>
       </Provider>
     );
