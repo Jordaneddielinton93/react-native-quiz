@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import * as UI from "../../";
+import * as UI from "../..";
 
 type Props = {};
 

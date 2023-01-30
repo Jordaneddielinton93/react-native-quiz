@@ -21,37 +21,43 @@ export default function CurriculmScreen({ navigation }: any) {
           navigation={navigation}
           img={ImageAssets.curriculum.html}
           progress={75}
-          languageIcon="html"
+          curriculumTopicLanguageName="html"
         />
         <UI.LanguageSection
           navigation={navigation}
           img={ImageAssets.curriculum.css}
           progress={10}
-          languageIcon="css"
+          curriculumTopicLanguageName="css"
         />
         <UI.LanguageSection
           navigation={navigation}
           img={ImageAssets.curriculum.git}
           progress={0}
-          languageIcon="git"
+          curriculumTopicLanguageName="git"
         />
         <UI.LanguageSection
           navigation={navigation}
           img={ImageAssets.curriculum.js}
           progress={0}
-          languageIcon="js"
+          curriculumTopicLanguageName="js"
         />
         <UI.LanguageSection
           navigation={navigation}
           img={ImageAssets.curriculum.node}
           progress={0}
-          languageIcon="node"
+          curriculumTopicLanguageName="node"
         />
         <UI.LanguageSection
           navigation={navigation}
           img={ImageAssets.curriculum.postgresql}
           progress={0}
-          languageIcon="postgresql"
+          curriculumTopicLanguageName="postgresql"
+        />
+        <UI.LanguageSection
+          navigation={navigation}
+          img={ImageAssets.curriculum.react}
+          progress={0}
+          curriculumTopicLanguageName="react"
         />
       </ScrollView>
     </SafeAreaView>

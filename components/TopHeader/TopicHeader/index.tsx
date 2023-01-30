@@ -1,25 +1,11 @@
 import { Button, StyleSheet, TouchableHighlight, View } from "react-native";
 import * as UI from "../../";
 
-export default function ToipicHeader({
-  progress,
-  img,
-  navigation,
-}: {
-  progress: number;
-  img: any;
-  navigation: any;
-}) {
+export default function ToipicHeader({ progress }: { progress: number }) {
   return (
     <View style={styles.container}>
-      <View>
-        <TouchableHighlight
-          onPress={() => navigation.pop()}
-          style={styles.button}
-        >
-          <UI.AntDesign name="arrowleft" size={30} color="white" />
-        </TouchableHighlight>
-      </View>
+      <UI.CircleBackButton />
+
       <View style={styles.LogoCoins_and_Button}>
         <View style={styles.Logo_and_bugcoin}>
           <UI.Logo />
@@ -28,7 +14,7 @@ export default function ToipicHeader({
             <UI.CoinsEarned />
           </View>
         </View>
-        <UI.LanguageButtonSm progress={progress} img={img} />
+        <UI.LanguageButtonSm progress={progress} />
       </View>
     </View>
   );

@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     padding: 10,
     height: 500,
     backgroundColor: "gray",
+    alignSelf: "center",
   },
   text: {},
 });

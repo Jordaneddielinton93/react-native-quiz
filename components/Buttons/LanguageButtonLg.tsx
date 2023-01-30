@@ -7,7 +7,7 @@ export default function LanguageButtonLg({
   img,
   progress,
   navigation,
-  languageIcon,
+  curriculumTopicLanguageName,
 }: any) {
   return (
     <View style={styles.container}>
@@ -33,7 +33,9 @@ export default function LanguageButtonLg({
       <Pressable
         style={styles.button}
         onPress={() =>
-          navigation.navigate("Topic", { languageIcon: languageIcon })
+          navigation.navigate("Topic", {
+            curriculumTopicLanguageName: curriculumTopicLanguageName,
+          })
         }
         accessibilityLabel="Learn more about html"
       ></Pressable>

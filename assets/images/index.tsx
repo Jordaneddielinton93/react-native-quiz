@@ -1,18 +1,4 @@
-type TImageAssets = {
-  curriculum: {
-    html: number;
-    css: number;
-    git: number;
-    js: number;
-    node: number;
-    postgresql: number;
-    mountain: number;
-    spaceShip: number;
-  };
-  Topic: {
-    TopSplash: number;
-  };
-};
+import { TImageAssets } from "../../types/types";
 
 const ImageAssets: TImageAssets = {
   curriculum: {
@@ -22,6 +8,7 @@ const ImageAssets: TImageAssets = {
     js: require("./curriculumScreen/js.png"),
     node: require("./curriculumScreen/node.png"),
     postgresql: require("./curriculumScreen/postgresql.png"),
+    react: require("./curriculumScreen/postgresql.png"),
     mountain: require("./curriculumScreen/mountain.png"),
     spaceShip: require("./curriculumScreen/ships.png"),
   },

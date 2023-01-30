@@ -8,7 +8,7 @@ export default function LanguageSection({
   img,
   progress,
   navigation,
-  languageIcon,
+  curriculumTopicLanguageName,
 }: any) {
   return (
     <View style={styles.container}>
@@ -16,7 +16,7 @@ export default function LanguageSection({
         navigation={navigation}
         img={img}
         progress={progress}
-        languageIcon={languageIcon}
+        curriculumTopicLanguageName={curriculumTopicLanguageName}
       />
       <Squares_svg style={styles.square1} />
       <Squares_svg style={styles.square2} color="#4C5DEE" />

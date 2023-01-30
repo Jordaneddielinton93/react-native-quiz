@@ -1,12 +1,25 @@
-import { Button, Image, Pressable, StyleSheet, View } from "react-native";
+import { RouteProp, useRoute } from "@react-navigation/native";
+import { Image, StyleSheet, View } from "react-native";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
+import { RootStackParamList } from "../../App";
+import ImageAssets from "../../assets/images";
+import { T_LanguageTypes } from "../../types/types";
 
-type Props = {
-  img: any;
+type Topic_LayoutComponentRouteProp = RouteProp<RootStackParamList, "Topic">;
+
+interface Props {
+  route?: Topic_LayoutComponentRouteProp;
   progress: number;
-};
+}
 
-export default function LanguageButtonSm({ img, progress }: Props) {
+export default function LanguageButtonSm({ progress }: Props) {
+  const route = useRoute();
+  let curriculumTopicLanguageName = route?.params?.curriculumTopicLanguageName;
+
+  let img =
+    ImageAssets.curriculum[
+      curriculumTopicLanguageName as keyof T_LanguageTypes
+    ];
   return (
     <View style={styles.container}>
       <AnimatedCircularProgress
@@ -69,6 +82,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    overflow: "visible",
   },
   button: {
     position: "absolute",

@@ -6,9 +6,15 @@ import { store } from "./redux/store";
 import { Provider } from "react-redux";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import CurriculmScreen from "./screens/CurriculmScreen";
-import Topic_Layout from "./screens/Topic_Layout/Topic_Layout";
+import Topic_Layout from "./screens/CurriculmScreen/Topic_Layout/Topic_Layout";
 
-const Stack = createNativeStackNavigator();
+import DynamicQuestions from "./screens/CurriculmScreen/Topic_Layout/DynamicQuestions/DynamicQuestions";
+export type RootStackParamList = {
+  CurriculmScreen: undefined;
+  Topic: { languageIcon: string };
+  DynamicQuestions: undefined;
+};
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -30,6 +36,10 @@ export default function App() {
               name="Topic"
               component={Topic_Layout}
               options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="DynamicQuestions"
+              component={DynamicQuestions}
             />
           </Stack.Navigator>
         </NavigationContainer>
