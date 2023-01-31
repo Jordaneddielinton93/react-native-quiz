@@ -11,7 +11,7 @@ import Topic_Layout from "./screens/CurriculmScreen/Topic_Layout/Topic_Layout";
 import DynamicQuestions from "./screens/CurriculmScreen/Topic_Layout/DynamicQuestions/DynamicQuestions";
 export type RootStackParamList = {
   CurriculmScreen: undefined;
-  Topic: { languageIcon: string };
+  Topic: { curriculumTopicLanguageName: string };
   DynamicQuestions: undefined;
 };
 const Stack = createNativeStackNavigator<RootStackParamList>();

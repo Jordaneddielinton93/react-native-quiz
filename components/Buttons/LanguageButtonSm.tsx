@@ -8,12 +8,11 @@ import { T_LanguageTypes } from "../../types/types";
 type Topic_LayoutComponentRouteProp = RouteProp<RootStackParamList, "Topic">;
 
 interface Props {
-  route?: Topic_LayoutComponentRouteProp;
   progress: number;
 }
 
 export default function LanguageButtonSm({ progress }: Props) {
-  const route = useRoute();
+  const route = useRoute() as Topic_LayoutComponentRouteProp;
   let curriculumTopicLanguageName = route?.params?.curriculumTopicLanguageName;
 
   let img =

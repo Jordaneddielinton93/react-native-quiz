@@ -43,20 +43,23 @@ export default function LineContent({
           backgroundColor: isSelectedInput ? "white" : "",
         }}
       >
-        {Ut.text.findAndSplitJsKeyWordsArr(textInput).map((word: string) => {
-          return (
-            <Text
-              style={
-                JS_keyWordsColorMap[word] || {
-                  color: "white",
-                  fontWeight: "700",
+        {Ut.text
+          .findAndSplitJsKeyWordsArr(textInput)
+          .map((word: string, index) => {
+            return (
+              <Text
+                key={index}
+                style={
+                  JS_keyWordsColorMap[word] || {
+                    color: "white",
+                    fontWeight: "700",
+                  }
                 }
-              }
-            >
-              {word.toLowerCase()}
-            </Text>
-          );
-        })}
+              >
+                {word.toLowerCase()}
+              </Text>
+            );
+          })}
       </View>
     </View>
   );
